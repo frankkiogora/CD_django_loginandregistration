@@ -17,3 +17,6 @@ Last Name - Required; No fewer than 2 characters; letters only
 Email - Required; Valid Format
 Password - Required; No fewer than 8 characters in length; matches Password Confirmation
 Use Bcrypt to encrypt your users’ passwords
+
+FELISA'S NOTE: 
+The screenshots folder is non-standard and is attached to provide a quick view of the templates. These have no bearing on the functionality of the project.
