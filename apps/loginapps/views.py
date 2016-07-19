@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from .models import User
+from django.core.urlresolvers import reverse
 # Create your views here.
 def index(request):
     return render(request, 'loginapps/index.html')
@@ -8,10 +9,10 @@ def index(request):
 def register(request):
     if User.userManager.isValidRegistration(request.POST, request):
         passFlag = True
-        return redirect ('/success')
+        return redirect (reverse('success'))
     else:
         passFlag = False
-        return redirect('/')
+        return redirect(reverse('index'))
 
 def success(request):
     return render(request, 'loginapps/success.html')
@@ -19,7 +20,7 @@ def success(request):
 def login(request):
     if User.userManager.UserExistsLogin(request.POST, request):
         passFlag = True
-        return redirect ('/success')
+        return redirect (reverse('success'))
     else:
         passFlag = False
-        return redirect ('/')
+        return redirect (reverse('index'))

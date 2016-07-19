@@ -18,7 +18,7 @@
             </ul>
             {% endif %}
 
-            <form action="/" method="POST" class="form-horizontal">
+            <form action="{% url 'index' %}" method="POST" class="form-horizontal">
                 {% csrf_token %}
                 <input class="btn btn-default" id="submitbutton" type="submit" value="Home">
             </form>
